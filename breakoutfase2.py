@@ -183,7 +183,7 @@ class Game(tk.Frame):
         image = image[:, ::-1, :]
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-        results = self.model(image_rgb)
+        results = self.model(image_rgb,verbose=False)
 
         image_object = image_rgb.copy()
 
